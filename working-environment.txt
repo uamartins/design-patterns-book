@@ -1,0 +1,9 @@
+﻿Книга за шаблони за дизайн
+----------------------------
+
+Работен уеб сайт: http://code.google.com/p/design-patterns-book/
+Адрес на SVN хранилище: http://code.google.com/p/design-patterns-book/ (използвайте криптирана връзка (https) за неанонимен достъп (non-annonymous access)
+Официален уеб сайт: -
+Дискусионна група: http://groups.google.com/group/introcsharpbook 
+Адрес на дискусионната група: design-patterns-book@googlegroups.com
+Адрес на организаторите: design.patterns.book.team@gmail.com
