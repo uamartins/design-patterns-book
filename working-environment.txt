@@ -4,6 +4,6 @@
 Работен уеб сайт: http://code.google.com/p/design-patterns-book/
 Адрес на SVN хранилище: http://code.google.com/p/design-patterns-book/ (използвайте криптирана връзка (https) за неанонимен достъп (non-annonymous access)
 Официален уеб сайт: -
-Дискусионна група: http://groups.google.com/group/introcsharpbook 
+Дискусионна група: https://groups.google.com/group/design-patterns-book
 Адрес на дискусионната група: design-patterns-book@googlegroups.com
 Адрес на организаторите: design.patterns.book.team@gmail.com
