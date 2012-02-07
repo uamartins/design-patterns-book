@@ -12,4 +12,6 @@ Add your content here.  Format your content with:
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
 
-<iframe width='500' height='300' frameborder='0' src='https://docs.google.com/spreadsheet/pub?hl=bg&hl=bg&key=0AtnOTAS-f1ybdDZmRF83TUdYTjBUdE8ydERJSHpJNEE&single=true&gid=4&output=html'></iframe>
+<iframe width='500' height='300' frameborder='0' src='http://docs.google.com/spreadsheet/pub?hl=bg&hl=bg&key=0AtnOTAS-f1ybdDZmRF83TUdYTjBUdE8ydERJSHpJNEE&single=true&gid=4&output=html'></iframe>
+
+<wiki:gadget url="http://docs.google.com/spreadsheet/pub?hl=bg&hl=bg&key=0AtnOTAS-f1ybdDZmRF83TUdYTjBUdE8ydERJSHpJNEE&single=true&gid=4&output=html" height="250" border="0" />
