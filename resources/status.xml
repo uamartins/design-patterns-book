@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
   <ModulePrefs title="remote content example" />
-  <Content type="url" href="https://docs.google.com/spreadsheet/pub?hl=bg&hl=bg&key=0AtnOTAS-f1ybdDZmRF83TUdYTjBUdE8ydERJSHpJNEE&single=true&gid=4&output=html" />
+  <Content type="url" href="https://docs.google.com/spreadsheet/pub?hl=bg&hl=bg&key=0AtnOTAS-f1ybdDZmRF83TUdYTjBUdE8ydERJSHpJNEE&single=true&gid=4&output=pdf" />
 </Module>
