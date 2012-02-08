@@ -2,4 +2,4 @@
 
 = Статус на проекта =
 
-<wiki:gadget url="http://design-patterns-book.googlecode.com/svn/trunk/resources/status.xml" width="900" height="500" />
+<wiki:gadget url="http://design-patterns-book.googlecode.com/svn/trunk/resources/status.xml" width="1000" height="500" />
