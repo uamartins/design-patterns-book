@@ -12,4 +12,4 @@ Add your content here.  Format your content with:
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
 
-<wiki:gadget url="http://design-patterns-book.googlecode.com/svn/trunk/resources/status.xml" width="540" height="400" />
+<wiki:gadget url="http://design-patterns-book.googlecode.com/svn/trunk/resources/status.xml" width="500" height="300" />
