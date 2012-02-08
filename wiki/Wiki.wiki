@@ -1,15 +1,10 @@
-#summary One-sentence summary of this page.
+#summary Статус на проекта
 
-= Introduction =
-
-Add your content here.
-
-
-= Details =
+= Статус на проекта =
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
 
-<wiki:gadget url="http://design-patterns-book.googlecode.com/svn/trunk/resources/status.xml" width="500" height="300" />
+<wiki:gadget url="http://design-patterns-book.googlecode.com/svn/trunk/resources/status.xml" width="700" height="500" />
