@@ -1,3 +1,3 @@
-ProjectHome
+[ProjectHome]
 
 [Status Състояние на проекта]
