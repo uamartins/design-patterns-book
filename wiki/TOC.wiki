@@ -1,5 +1,5 @@
-[http://code.google.com/p/design-patterns-book/ Начална страница]
+[Wiki Начална страница]
 
-[Wiki Уики - начална страница]
+[DeadLines Крайни срокове]
 
 [Status Състояние на проекта]
