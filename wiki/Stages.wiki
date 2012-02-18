@@ -6,7 +6,7 @@
 
 <table border=1>
  <thead>
-    <tr >
+    <tr > 
       <th>*Дата*</th>
       <th>*Описание*</th>
     </tr>
