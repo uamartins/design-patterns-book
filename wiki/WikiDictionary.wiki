@@ -1,0 +1,6 @@
+#summary One-sentence summary of this page.
+
+= Речник =
+
+||*термин*||*превод*||
+||generics||шаблонен тип/клас||
