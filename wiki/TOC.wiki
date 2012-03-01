@@ -2,5 +2,7 @@
     * [WikiStatus Състояние на проекта]
     * [WikiStages Етапи и крайни срокове]
     * [WikiChapterContent За съдържанието на главите]
+<wiki:comment>
     * [WikiWorkingMethodology Методология на работа]
+</wiki:comment>
     * [WikiDictionary Речник]
