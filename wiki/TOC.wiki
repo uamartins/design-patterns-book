@@ -1,9 +1,9 @@
   * [Wiki Уики на екипа]
-    * [WikiStatus Състояние на проекта]
     * [WikiStages Етапи и крайни срокове]
     * [WikiChapterContent За съдържанието на главите]
   * [WikiDictionary Речник]
 <wiki:comment>
+    * [WikiStatus Състояние на проекта]
     * [WikiWorkingMethodology Методология на работа]
 </wiki:comment>
   
