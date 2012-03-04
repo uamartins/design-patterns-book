@@ -12,10 +12,13 @@ public class Apple {
 	}
 
 	public void eat() {
+		System.out.println("Finally Eating The Apple!");
+	}
+
+	public void consume() {
 		washOut();
 		peelOffApple();
 		chop();
-
-		System.out.println("Finally Eating The Apple!");
+		eat();
 	}
 }

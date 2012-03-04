@@ -1,5 +1,5 @@
 public class Banana {
-	public void determinePeelingEndToStartFrom() {
+	public void determinePeelingSide() {
 		System.out.println("Determing The End To Peel Off From.");
 	}
 
@@ -11,11 +11,14 @@ public class Banana {
 		System.out.println("Peeling This Banana's Strokes Off.");	
 	}
 
-	public void eat() {
-		determinePeelingEndToStartFrom();
+	public void eat(){
+		System.out.println("Finally Eating The Banana!");	
+	}
+	
+	public void consume() {
+		determinePeelingSide();
 		peelOff();
 		peelTheStrokesOff();
-		
-		System.out.println("Finally Eating The Banana!");
+		eat();	
 	}
 }
