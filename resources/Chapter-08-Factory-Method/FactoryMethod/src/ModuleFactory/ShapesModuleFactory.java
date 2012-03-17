@@ -1,3 +1,5 @@
+package ModuleFactory;
+
 public class ShapesModuleFactory extends ModuleFactory {
 	protected @Override
 	Module createModuleOverride() {

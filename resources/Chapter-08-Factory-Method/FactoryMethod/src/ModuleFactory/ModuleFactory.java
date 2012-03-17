@@ -1,3 +1,5 @@
+package ModuleFactory;
+
 public class ModuleFactory {
 	private Module defaultModule;
 
