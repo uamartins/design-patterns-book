@@ -1,3 +1,5 @@
+package LabelFactory;
+
 public class PhoneLabel extends Label {
 	public @Override
 	void render() {

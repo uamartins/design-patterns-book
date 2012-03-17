@@ -1,3 +1,5 @@
+package LabelFactory;
+
 public class WebLabel extends Label {
 	public @Override
 	void render() {
