@@ -1,4 +1,4 @@
-package bg.designpatternsbook.builder;
+package bg.designpatternsbook.builder.flight;
 
 import java.util.Date;
 
