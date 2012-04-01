@@ -18,3 +18,4 @@
 || refactoring || преработка||
 || representation || представяне ||
 || unified || уеднаквен, еднороден ||
+|| memory leak || изтичане на памет ||
