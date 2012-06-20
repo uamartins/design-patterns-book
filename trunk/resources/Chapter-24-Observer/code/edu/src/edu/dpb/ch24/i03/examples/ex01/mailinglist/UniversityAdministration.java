@@ -1,4 +1,4 @@
-package edu.dpb.ch24.i03.examples.ex01.messagebox;
+package edu.dpb.ch24.i03.examples.ex01.mailinglist;
 
 import java.util.Date;
 
