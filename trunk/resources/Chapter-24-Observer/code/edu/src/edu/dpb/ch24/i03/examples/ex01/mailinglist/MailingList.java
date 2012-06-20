@@ -3,13 +3,13 @@ package edu.dpb.ch24.i03.examples.ex01.mailinglist;
 import java.util.Date;
 import java.util.HashSet;
 
-public class MessageBox extends Subject {
+public class MailingList extends Subject {
 	private String from;
 	private String subject;
 	private Date date;
 	private String body;
 
-	public MessageBox() {
+	public MailingList() {
 		observers = new HashSet<Observer>();
 	}
 

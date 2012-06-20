@@ -37,7 +37,7 @@ public class MainClass {
 		uniAdmin.sendMessage("UniAdmin", "AdminMsg-2", new Date(), null);
 
 		// 7. assistent sends message
-		// messageBox.setMessage(assistant.getRole(), "Assist", "AssistMsg",
+		// mailingList.setMessage(assistant.getRole(), "Assist", "AssistMsg",
 		//		new Date(), "AssistMsgBody");
 
 	}

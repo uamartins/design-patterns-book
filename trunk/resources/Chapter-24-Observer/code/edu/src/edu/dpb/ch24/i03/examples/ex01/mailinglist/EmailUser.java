@@ -4,18 +4,18 @@ import java.util.Date;
 
 public class EmailUser implements Observer {
 	// callback
-	private MessageBox messageBox;
+	private MailingList mailingList;
 
-	public EmailUser(MessageBox messageBox) {
-		this.messageBox = messageBox;
+	public EmailUser(MailingList mailingList) {
+		this.mailingList = mailingList;
 	}
 
 	@Override
 	public void update() {
-		String from = messageBox.getFrom();
-		String subject = messageBox.getSubject();
-		Date date = messageBox.getDate();
-		String body = messageBox.getBody();
+		String from = mailingList.getFrom();
+		String subject = mailingList.getSubject();
+		Date date = mailingList.getDate();
+		String body = mailingList.getBody();
 
 		System.out.println("[EmailUser] Received Email message:\n\tFROM: "
 				+ from + "\n\tSUBJECT: " + subject + "\n\tDATE: " + date
@@ -24,7 +24,7 @@ public class EmailUser implements Observer {
 
 	@Override
 	public Subject getSubject() {
-		return messageBox;
+		return mailingList;
 	}
 
 	@Override

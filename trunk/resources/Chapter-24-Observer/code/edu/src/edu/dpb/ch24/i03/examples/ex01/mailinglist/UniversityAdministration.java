@@ -3,13 +3,13 @@ package edu.dpb.ch24.i03.examples.ex01.mailinglist;
 import java.util.Date;
 
 public class UniversityAdministration {
-	private MessageBox messageBox;
+	private MailingList mailingList;
 
-	public UniversityAdministration(MessageBox messageBox) {
-		this.messageBox = messageBox;
+	public UniversityAdministration(MailingList mailingList) {
+		this.mailingList = mailingList;
 	}
 
 	public void sendMessage(String from, String subject, Date date, String body) {
-		messageBox.setMessage(from, subject, date, body);
+		mailingList.setMessage(from, subject, date, body);
 	}
 }
