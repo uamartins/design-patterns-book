@@ -17,9 +17,10 @@ public class EmailUser implements Observer {
 		Date date = mailingList.getDate();
 		String body = mailingList.getBody();
 
-		System.out.println("[EmailUser] Received Email message:\n\tFROM: "
-				+ from + "\n\tSUBJECT: " + subject + "\n\tDATE: " + date
-				+ "\n\tBODY: " + body + "\n");
+		String message = String
+				.format("[EmailUser] Received Email message:\n\tFROM: %s\n\tSUBJECT: %s\n\tDATE: %s\n\tBODY: %s\n",
+						from, subject, date.toString(), body);
+		System.out.println(message);
 	}
 
 	@Override

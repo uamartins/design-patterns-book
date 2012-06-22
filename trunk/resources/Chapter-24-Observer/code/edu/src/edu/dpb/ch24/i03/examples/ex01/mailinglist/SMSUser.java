@@ -16,8 +16,10 @@ public class SMSUser implements Observer {
 		String subject = mailingList.getSubject();
 		Date date = mailingList.getDate();
 
-		System.out.println("[SMSUser] Received SMS message:\n\tFROM: " + from
-				+ "\n\tSUBJECT: " + subject + "\n\tDATE: " + date + "\n");
+		String message = String
+				.format("[SMSUser] Received SMS message:\n\tFROM: %s\n\tSUBJECT: %s\n\tDATE: %s\n",
+						from, subject, date);
+		System.out.println(message);
 	}
 
 	@Override
