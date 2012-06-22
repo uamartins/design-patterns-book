@@ -4,13 +4,13 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Set;
 
-public class MessageBox extends Subject {
+public class MailingList extends Subject {
 	private String from;
 	private String subject;
 	private Date date;
 	private String body;
 
-	public MessageBox() {
+	public MailingList() {
 		role2observers = new HashMap<Role, Set<Observer>>();
 	}
 

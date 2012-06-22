@@ -4,11 +4,11 @@ import java.util.Date;
 
 public class SMSUser implements Observer {
 	// callback
-	MessageBox messageBox;
+	MailingList mailingList;
 	private Role role;
 
-	public SMSUser(MessageBox messageBox, Role role) {
-		this.messageBox = messageBox;
+	public SMSUser(MailingList mailingList, Role role) {
+		this.mailingList = mailingList;
 		this.role = role;
 	}
 
@@ -18,9 +18,9 @@ public class SMSUser implements Observer {
 
 	@Override
 	public void update() {
-		String from = messageBox.getFrom();
-		String subject = messageBox.getSubject();
-		Date date = messageBox.getDate();
+		String from = mailingList.getFrom();
+		String subject = mailingList.getSubject();
+		Date date = mailingList.getDate();
 
 		System.out.println("[" + role
 				+ "][SMSUser] Received SMS message:\n\tFROM: " + from
@@ -29,7 +29,7 @@ public class SMSUser implements Observer {
 
 	@Override
 	public Subject getSubject() {
-		return messageBox;
+		return mailingList;
 	}
 
 	@Override
