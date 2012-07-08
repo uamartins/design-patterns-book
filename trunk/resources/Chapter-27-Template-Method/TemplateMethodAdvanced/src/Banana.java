@@ -1,24 +1,11 @@
-public class Banana {
-	public void determinePeelingSide() {
-		System.out.println("Determing The End To Peel Off From.");
+public class Banana extends Fruit{
+	@Override
+	public void prepareToPeel() {
+		System.out.println("Determining The End To Peel Off From.");
 	}
 
-	public void peelOff() {
-		System.out.println("Peeling This Banana Off.");
-	}
-	
-	public void peelTheStrokesOff(){
-		System.out.println("Peeling This Banana's Strokes Off.");	
-	}
-
-	public void eat(){
-		System.out.println("Finally Eating The Banana!");	
-	}
-	
-	public void consume() {
-		determinePeelingSide();
-		peelOff();
-		peelTheStrokesOff();
-		eat();	
+	@Override
+	public void processAfterPeel() {
+        System.out.println("Peeling This Banana's Strokes Off.");	
 	}
 }
