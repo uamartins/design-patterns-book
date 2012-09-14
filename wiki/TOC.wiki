@@ -1,5 +1,6 @@
   * [Wiki Уики на екипа]
     * [WikiStages Етапи и крайни срокове]
+      * [WikiStagesIteration04 Итерация - 4 - Смесена]
       * [WikiStagesIteration03 Итерация - 3 - Писане]
       * [WikiStagesIteration02 Итерация - 2 - Редакция]
       * [WikiStagesIteration01Prim Итерация - 1' - Дописване]
