@@ -9,9 +9,11 @@ public class BfsPathFindingStrategy implements PathFindingStrategy {
 	public List<Node> findPath(List<List<Node>> graph, Node strartingNode,
 			Node destinationNode, List<Node> visitedNodes) {
 		List<Node> path = new ArrayList<Node>();
+
 		// Code implementing breadth first search which fills the path
-		// collection and the visitedNodes collection
-		// return the found path
+		// collection and the visitedNodes collection.
+
+		// Return the resulting path.
 		return path;
 	}
 }
