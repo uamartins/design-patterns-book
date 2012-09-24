@@ -3,6 +3,7 @@ package edu.dpb.ch26.example2;
 import java.util.List;
 
 public class PathFinder {
+
 	private List<List<Node>> graph;
 	private PathFindingStrategy strategy;
 	private List<Node> path;

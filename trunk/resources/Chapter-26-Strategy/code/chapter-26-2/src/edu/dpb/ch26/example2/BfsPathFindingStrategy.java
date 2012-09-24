@@ -13,6 +13,5 @@ public class BfsPathFindingStrategy implements PathFindingStrategy {
 		// collection and the visitedNodes collection
 		// return the found path
 		return path;
-
 	}
 }
