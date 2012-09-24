@@ -3,7 +3,7 @@ package edu.dpb.ch26.example1;
 import java.util.List;
 
 public class DfsPathFindingStrategy implements PathFindingStrategy {
-	
+
 	@Override
 	public List<Node> findPath(PathFinder context) {
 		context.getPath().clear();

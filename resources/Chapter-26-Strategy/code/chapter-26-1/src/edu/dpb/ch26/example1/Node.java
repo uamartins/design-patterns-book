@@ -1,7 +1,7 @@
 package edu.dpb.ch26.example1;
 
 public class Node {
-	
+
 	private int x;
 	private int y;
 
