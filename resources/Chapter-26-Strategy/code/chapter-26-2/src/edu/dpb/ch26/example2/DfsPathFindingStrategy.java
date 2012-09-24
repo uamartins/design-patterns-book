@@ -9,9 +9,11 @@ public class DfsPathFindingStrategy implements PathFindingStrategy {
 	public List<Node> findPath(List<List<Node>> graph, Node strartingNode,
 			Node destinationNode, List<Node> visitedNodes) {
 		List<Node> path = new ArrayList<Node>();
+
 		// Code implementing depth first search which fills the path collection
-		// and the visitedNodes collection
-		// return the found path
+		// and the visitedNodes collection.
+
+		// Return the resulting path.
 		return path;
 	}
 }

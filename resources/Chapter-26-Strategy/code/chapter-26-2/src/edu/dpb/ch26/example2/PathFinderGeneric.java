@@ -8,8 +8,8 @@ public class PathFinderGeneric<T extends PathFindingStrategy> {
 
 	public PathFinderGeneric(List<List<Node>> graph, Node startingPoint,
 			Node destinationPoint, T strategy) {
-		// rest of initialization code
 		this.strategy = strategy;
+		// The rest of the initialization code...
 	}
 
 	public T getStrategy() {
