@@ -1,6 +1,6 @@
 
 public class OperatingSystem {
-	private TimerApplication.Settings timerSettings;
+	private Object timerSettings;
 	private TimerApplication timerApplication;
 	
 	public void startTimerApplication() {
@@ -17,6 +17,8 @@ public class OperatingSystem {
 		if (this.timerApplication != null) {
 			this.timerApplication.stop();
 			this.timerSettings = this.timerApplication.getSettings();
+			
+			System.out.println(this.timerApplication.getMilliseconds());
 		}
 	}
 

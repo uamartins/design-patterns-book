@@ -1,49 +1,41 @@
 
 public class TimerApplication {
-	private int milliseconds;
+	private long startTimeInNanoseconds;
+	private long milliseconds;
 	
-	private interface PrivateSettings {
-		int getMilliseconds();
-		void setMilliseconds(int value);
-	}
-	
-	public class Settings 
-		implements PrivateSettings {
+	private class Settings {
+		private long milliseconds;
 		
-		private int milliseconds;
-		
-		public Settings(){
-		}
-
-		@Override
-		public int getMilliseconds() {
+		public long getMilliseconds() {
 			return this.milliseconds;
 		}
 
-		@Override
-		public void setMilliseconds(int value) {
+		public void setMilliseconds(long value) {
 			this.milliseconds = value;
 		}
 	}
 	
-	public Settings getSettings() {
-		PrivateSettings settings = new Settings();
+	public Object getSettings() {
+		Settings settings = new Settings();
 		settings.setMilliseconds(this.milliseconds);
 		
 		return (Settings)settings;
 	}
 	
-	public void setSettings(Settings settings){
-		this.milliseconds = ((PrivateSettings)settings).getMilliseconds();
+	public void setSettings(Object settings){
+		this.milliseconds = ((Settings)settings).getMilliseconds();
 	}
 
 	public void start() {
-		// TODO Auto-generated method stub
-		
+		this.startTimeInNanoseconds = System.nanoTime();		
 	}
 
 	public void stop() {
-		// TODO Auto-generated method stub
-		
+		long endTimeInNanoseconds = System.nanoTime(); 
+		this.milliseconds += (endTimeInNanoseconds - this.startTimeInNanoseconds) / 1000000;
+	}
+	
+	public long getMilliseconds() {
+		return this.milliseconds;
 	}
 }
