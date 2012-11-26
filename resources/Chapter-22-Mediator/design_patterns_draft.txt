@@ -1,0 +1,106 @@
+В ТАЗИ ТЕМА
+
+ЦЕЛ НА ШАБЛОНА
+mediator pattern defines an object that encapsulates how a set of objects interact. This pattern is considered to be a behavioral pattern due to the way it can alter the program's running behavior.
+Множество класове, висока обвързаност помежду им. Така промяна в един клас може да доведе до промяна във всички останали класове, които дирекно комуникират с първия. Получава се един хаос от взаимовръзки между класовете (като онази играя с дърпането на пръчки).
+This reduces the dependencies between communicating objects, thereby lowering the coupling
+The Mediator design pattern encapsulates the interaction of a set of objects. The Mediator decreases the
+coupling between the objects since they do not refer to each other directly. The Mediator can be replaced independently, allowing one to vary the interaction between the objects.
+
+
+ДРУГИ НАИМЕНОВАНИЯ
+ - Event Bus/ Message Bus
+
+ПРОБЛЕМ
+The implementation approach for the Mediator design pattern is to decouple the functionality of an
+object from its interaction with other objects. The interaction of a group of objects is encapsulated in a separate object,
+indicated as the Mediator.
+One of the goals of object-oriented design is to distribute behavior among different objects. This kind of partitioning is good since it encourages reuse.
+Sometimes, the interactions between these objects become so much that every object in the system ends up knowing about every other object. Lots of such interactions prevent an object from working without the support of a lot of other objects and thus the whole system ends up becoming one huge monolith - you ended up in the same mess you tried to un-entangle in the first place!
+- понякога също така е трудно да проследиш с кого точно комуникира даден колега (The methods, in general, only consist of a call to the colleague object that is supposed to take care of the message. This is much work, but it also leads to the second problem: The structure of the interactions between the objects is lost in the implementation and can not be traced from design to implementation.)
+[Клас диаграма на спагети приложение]
+
+При употребата на настоящи шаблон се обособява звено (т.н. посредник), което централизира комуникацията между множество обекти.
+encapsulating the collective behavior in a separate mediator object
+Colleagues send and receive requests from the Mediator object. The Mediator implements this co-operative behavior by serving as a communications hub and routing requests between the appropriate colleagues.
+Secondly, the layer specification shows very clearly the structure of the interaction between the objects.
+[Клас диаграма на същото приложение ползващо Медиатор]
+
+ПРИЛОЖИМОСТ
+ - Mediators are generally used where complex protocols must be managed, and when centralized access points are desirable.
+ - event bus/ message bus
+ - data mediation
+ According to Gamma et al, the Mediator pattern should be used when:
+ - a set of objects communicate in well-defined but complex ways. The resulting interdependencies are unstructured and difficult to understand.
+ - reusing an object is difficult because it refers to and communicates with many other objects.
+ - a behavior that's distributed between several classes should be customizable without a lot of subclassing.
+ - динамично добавяне на нови колеги/контроли/bundles;
+ 
+СТРУКТУРА 
+Mediator - defines the interface for communication between Colleague objects
+ConcreteMediator - implements the Mediator interface and coordinates communication between Colleague objects. It is aware of all the Colleagues and their purpose with regards to inter communication.
+ConcreteColleague - communicates with other Colleagues through its Mediator
+
+There is no need to create an Abstract Mediator class or an interface as long as the colleagues are going to use only one mediator. The definition of an abstract Mediator is required only if the colleagues needs to work with different mediators.
+
+ОПИСАНИЕ
+При употребата на настоящи шаблон се обособява звено (т.н. посредник), което централизира комуникацията между множество обекти.
+Mediator is a behavioral pattern. This pattern helps to model a class whose object at run-time is responsible for controlling and coordinating the interactions of a group of other objects.
+It helps encapsulate collective behavior in a separate mediator object. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and allowing the designer to vary their interaction independently. Objects don’t need to know about each other, they just need to know their Mediator. 
+
+The control tower at a controlled airport demonstrates this pattern very well. The pilots of the planes approaching or departing the terminal area communicate with the tower rather than explicitly communicating with one another. The constraints on who can take off or land are enforced by the tower. It is important to note that the tower does not control the whole flight. It exists only to enforce constraints in the terminal area. (CHECK THE DIAGRAM)
+
+Отговорен е само за рутирането.
+
+
+ОЦЕНКА
+ + Changing the system behavior means just subclassing the mediator. Other objects can be used as is.
+ + Comprehension - Since the mediator promotes a One-to-Many relationship with its colleagues, the whole system is easier to understand (as opposed to a many-to-many relationship where everyone calls everyone else).
+ + Decoupled Colleagues  - The colleague classes are totally decoupled. Adding a new colleague class is very easy due to this decoupling level.
+ + Simplified object protocols - The colleague objects need to communicate only with the mediator objects. Practically the mediator pattern reduce the required communication channels(protocols) from many to many to one to many and many to one.
+ + Limits Subclassing - Because the entire communication logic is encapsulated by the mediator class, when this logic need to be extended only the mediator class need to be extended.
+ - класът на посредника често придобива големи размери, тъй като в себе си той централизира комуникацията между множество обекти.
+ - Since all the interaction between the colleagues are bundled into the mediator, it has the potential of making the mediator class very complex and monolithically hard to maintain.
+ - Complexity - in practice the mediators tends to become more complex and complex. A good practice is to take care to make the mediator classes responsible only for the communication part.
+ Be careful not to create a “controller” or “god” object.
+ - single point of failure (security/performance/complexity/reliability);
+
+РЕАЛИЗАЦИЯ
+ - чрез Observer и без него (чрез делегиране на отговорност);
+
+ПОЗНАТИ ПРИЛОЖЕНИЯ
+ - MFC uses the mediator pattern in the implementation of the CDialog class. 
+ - Similarly, Java's AWT uses the mediator pattern in the implementation of the java.awt.Dialog class.
+ Maybe the mediator pattern is mostly used in the user interfaces. Almost any GUI framework is build around it. Like discussed before, the classes representing forms (Dialog, Form,... ) represents the the mediator while each control represents a colleague.
+ - COM/OLE font caching
+ - JMS
+ The Java Message Service (JMS) API is a Java Message Oriented Middleware (MOM) API for sending messages between two or more clients. The JMS API supports 2 models. One of them is the publish-subscribe model. It is an implementation of the mediator pattern. The messages can be publisehd based on a particular topic. The publisher has to create a subscription to which different subscribers may subscribe. Zero or more subscribers may subscribe to receive messages on a particular message topic. The publisher and the subscriber doesn't know one about eachother, the subscriber can be even inactive. In this case the subscriber receives the messages when it will become active.
+ - DATABASES
+
+ПРИМЕР
+ - Chat application;
+ In a chat application we can have several participants. It's not a good idea to connect each participant to all the others because the number of connections would be really high, there would be technical problems due to proxies and firewalls, etc...
+ The most appropriate solution is to have a hub where all participants will connect; this hub is just the mediator class.
+ - Message Bus/Queue;
+ In more complex implementations asynchronous messages can be added to to a message queue, from where they can be picked up by the mediator object
+ - ViewMediator;
+ - Spring application with many bundles and injecting an Event Bus in every newly loaded application bundle;
+
+СВЪРЗАНИ ШАБЛОНИ
+ - Observer
+ Since Colleagues have to communicate with their Mediator whenever an event of interest occurs, there are different ways to implement the Mediator-Colleague communication.
+ The Mediator can be implemented as an Observer (using the Observer pattern) and the Colleagues as Subjects, which send notification to the mediator whenever a state change occurs. The Mediator then can propagate the effect of that change to other colleagues.
+ The other approach is to use some form of delegation. When sending a message to the Mediator, the Colleague passes itself as an argument, thus allowing the mediator to identify the sender.
+ Mediator and Observer are competing patterns. The difference between them is that Observer distributes communication by introducing “observer” and “subject” objects, whereas a Mediator object encapsulates the communication between other objects. We’ve found it easier to make reusable Observers and Subjects than to make reusable Mediators.
+ On the other hand, Mediator can leverage Observer for dynamically registering colleagues and communicating with them.
+ 
+ - Facade (при Фасада колегата съдържа поведението, което да се изпълни при дадени обстоятелства, той казва на Фасадата "изпълни това и това"; докато при Медиатора цялото поведение и програмна логика са централизирани в Медиатора, колегата единствено има отговорността да уведоми посредника за настъпилите обстоятелства (събитие/състояние).
+ a simplified mediator becomes a facade pattern if the mediator is the only active class and the colleagues are passive classes. A facade pattern is just an implementation of the mediator pattern where mediator is the only object triggering and invoking actions on passive colleague classes. The Facade is being call by some external classes.
+  (!! РАЗЛИЧНО ОПИСАНИЕ В ЗАВИСИМОСТ ОТ ГЛЕДНАТА ТОЧКА/ ДА СЕ ИЗЧИСТИ) 
+ Mediator is similar to Facade in that it abstracts functionality of existing classes. Mediator abstracts/centralizes arbitrary communication between colleague objects, it routinely “adds value”, and it is known/referenced by the colleague objects (i.e. it defines a multidirectional protocol). In contrast, Facade defines a simpler interface to a subsystem, it doesn’t add new functionality, and it is not known by the subsystem classes (i.e. it defines a unidirectional protocol where it makes requests of the subsystem classes but not vice versa).
+ - Adapter
+  the mediator patter just "mediate" the requests between the colleague classes. It is not supposed to change the messages it receives and sends; if it alters those messages then it is an Adapter pattern.
+ - Command
+ - Cache, Delegation
+ - Chain of Responsibility, Command, Mediator, and Observer, address how you can decouple senders and receivers, but with different trade-offs. Chain of Responsibility passes a sender request along a chain of potential receivers. Command normally specifies a sender-receiver connection with a subclass. Mediator has senders and receivers reference each other indirectly. Observer defines a very decoupled interface that allows for multiple receivers to be configured at run-time.	
+ - Producer-Consumer (mediating queue of produced objects)
