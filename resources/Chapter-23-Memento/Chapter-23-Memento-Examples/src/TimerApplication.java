@@ -22,7 +22,12 @@ public class TimerApplication {
 		return (Settings)settings;
 	}
 	
-	public void setSettings(Object settings){
+	public void setSettings(Object settings) {
+		
+		if (!(settings instanceof Settings)) {
+			throw new UnsupportedOperationException("Unsupported settings type.");
+		}
+		
 		this.milliseconds = ((Settings)settings).getMilliseconds();
 	}
 
