@@ -6,13 +6,13 @@ import java.util.Set;
 //	Observer observer1;
 //	// ...
 //	Observer observerN;
-//	// what will happen if observer N+1 ask for registration?
-//	//...
+//	// What will happen if observer N+1 asks for a registration?
+//	// ...
 //}
 
 public abstract class Subject {
 	Set<Observer> observers;
-	// when observer N+1 ask for registration, 
+	// When observer N+1 asks for a registration,
 	// it will be easily added to the collection.
 	// ...
 }
