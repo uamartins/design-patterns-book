@@ -3,7 +3,7 @@ public class TimerApplication {
 	private long startTimeInNanoseconds;
 	private long milliseconds;
 	
-	private class Settings {
+	private static final class Settings {
 		private long milliseconds;
 		
 		public long getMilliseconds() {
