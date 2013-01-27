@@ -1,46 +1,44 @@
-
 public class TimerApplication {
-	private long startTimeInNanoseconds;
-	private long milliseconds;
-	
-	private static final class Settings {
+	public static class Settings {
 		private long milliseconds;
-		
-		public long getMilliseconds() {
+
+		private Settings() {
+		}
+
+		private long getMilliseconds() {
 			return this.milliseconds;
 		}
 
-		public void setMilliseconds(long value) {
+		private void setMilliseconds(long value) {
 			this.milliseconds = value;
 		}
 	}
 	
-	public Object getSettings() {
+	private long milliseconds;
+
+	private long startTimeInNanoseconds;
+
+	public long getMilliseconds() {
+		return this.milliseconds;
+	}
+
+	public Settings getSettings() {
 		Settings settings = new Settings();
 		settings.setMilliseconds(this.milliseconds);
-		
-		return (Settings)settings;
+
+		return settings;
 	}
-	
-	public void setSettings(Object settings) {
-		
-		if (!(settings instanceof Settings)) {
-			throw new UnsupportedOperationException("Unsupported settings type.");
-		}
-		
-		this.milliseconds = ((Settings)settings).getMilliseconds();
+
+	public void setSettings(Settings settings) {
+		this.milliseconds = settings.getMilliseconds();
 	}
 
 	public void start() {
-		this.startTimeInNanoseconds = System.nanoTime();		
+		this.startTimeInNanoseconds = System.nanoTime();
 	}
 
 	public void stop() {
-		long endTimeInNanoseconds = System.nanoTime(); 
+		long endTimeInNanoseconds = System.nanoTime();
 		this.milliseconds += (endTimeInNanoseconds - this.startTimeInNanoseconds) / 1000000;
-	}
-	
-	public long getMilliseconds() {
-		return this.milliseconds;
 	}
 }
