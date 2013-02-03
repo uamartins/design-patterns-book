@@ -13,7 +13,7 @@ public class TimerApplication {
 			this.milliseconds = value;
 		}
 	}
-	
+
 	private long milliseconds;
 
 	private long startTimeInNanoseconds;
