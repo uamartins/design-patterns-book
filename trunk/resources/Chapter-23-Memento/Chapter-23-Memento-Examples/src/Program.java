@@ -4,7 +4,6 @@ public class Program {
 	 * @throws InterruptedException
 	 */
 	public static void main(String[] args) throws InterruptedException {
-
 		OperatingSystem operatingSystem = new OperatingSystem();
 
 		operatingSystem.startTimerApplication();
