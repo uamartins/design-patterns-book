@@ -1,0 +1,11 @@
+
+public class Packer {
+
+	public void turnOn() {
+		System.out.println("Включване на опаковъчна машина");
+	}
+
+	public void turnOff() {
+		System.out.println("Изключване на опаковъчна машина");
+	}
+}

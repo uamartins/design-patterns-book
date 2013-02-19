@@ -1,0 +1,11 @@
+
+public class Heater {
+	public void turnOn() {
+		System.out.println("Включване на нагревателя");
+	}
+
+	public void turnOff() {
+		System.out.println("Изключване на нагревателя");
+	}
+
+}

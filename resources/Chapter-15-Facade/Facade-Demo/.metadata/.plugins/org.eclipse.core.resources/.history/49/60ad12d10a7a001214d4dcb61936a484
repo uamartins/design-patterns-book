@@ -1,0 +1,12 @@
+
+public class Robot {
+
+	public void turnOn() {
+		System.out.println("Включване на робот");
+	}
+
+	public void turnOff() {
+		System.out.println("Изключване на робот");
+	}
+	
+}
