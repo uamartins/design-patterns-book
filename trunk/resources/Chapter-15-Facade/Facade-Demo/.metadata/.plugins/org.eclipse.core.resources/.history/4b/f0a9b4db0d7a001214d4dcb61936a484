@@ -1,0 +1,15 @@
+
+public class Robot {
+
+	public void turnOn() {
+		System.out.println("Включване на робот");
+	}
+
+	public void turnOff() {
+		System.out.println("Изключване на робот");
+	}
+	
+	public void Move(String material, String source, String destination) {
+		System.out.println("Изключване на робот");
+	}
+}

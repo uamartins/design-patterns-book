@@ -1,0 +1,56 @@
+public class WorkshopFacade {
+
+	private Robot robot;
+	private Mixer mixer;
+	private Cutter cutter;
+	private Heater heater;
+	private Packer packer;
+
+	public WorkshopFacade() {
+		super();
+		this.robot = new Robot();
+		this.mixer = new Mixer();
+		this.cutter = new Cutter();
+		this.heater = new Heater();
+		this.packer = new Packer();
+	}
+
+	public void makeBread() {
+		robot.turnOn();
+		robot.move("брашно", "склад", "миксер");
+		robot.move("сол", "склад", "миксер");
+		robot.move("захар", "склад", "миксер");
+		robot.move("вода", "склад", "миксер");
+		robot.move("мая", "склад", "миксер");
+
+		mixer.turnOn();
+		mixer.mix();
+		mixer.turnOff();
+
+		robot.move("тесто", "миксер", "машина за рязане");
+
+		cutter.turnOn();
+		cutter.cutDough();
+		cutter.turnOff();
+
+		robot.move("тесто", "машина за рязане", "нагревател");
+
+		heater.turnOn();
+		heater.bakeBread();
+		heater.turnOff();
+
+		robot.move("хляб", "нагревател", "опаковъчна машина");
+
+		packer.turnOn();
+		packer.packBread();
+		packer.turnOff();
+
+		robot.move("хляб", "опаковъчна машина", "склад");
+		robot.turnOff();
+	}
+
+	public void makeDough() {
+		
+	}
+
+}

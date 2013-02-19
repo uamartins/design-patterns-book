@@ -1,0 +1,29 @@
+import java.io.IOException;
+
+
+public class BakeryClient {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Robot robot = new Robot();
+		Mixer mixer = new Mixer();
+		Cutter cutter = new Cutter();
+		Heater heater = new Heater();
+		Packer packer = new Packer();
+		
+		
+		robot.turnOn();
+		robot.move("брашно", "склад", "миксер");
+		robot.move("сол", "склад", "миксер");
+		robot.move("захар", "склад", "миксер");
+		robot.move("вода", "склад", "миксер");
+		robot.move("мая", "склад", "миксер");
+		
+		mixer.turnOn();
+		mixer.mix();
+	}
+
+}

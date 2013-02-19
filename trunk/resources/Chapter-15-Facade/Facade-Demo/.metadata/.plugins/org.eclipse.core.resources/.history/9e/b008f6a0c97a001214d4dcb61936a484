@@ -1,0 +1,27 @@
+
+public class Packer {
+
+	public void turnOn() {
+		System.out.println("Включване на опаковъчна машина");
+	}
+
+	public void turnOff() {
+		System.out.println("Изключване на опаковъчна машина");
+	}
+	
+	public void packBread() {
+		System.out.println("Опаковане на хляб");
+	}
+	
+	public void packDough() {
+		System.out.println("Опаковане на тесто");
+	}
+	
+	public void packJam() {
+		System.out.println("Опаковане на конфитюр");
+	}
+	
+	public void packCompote() {
+		System.out.println("Опаковане на компот");
+	}
+}
