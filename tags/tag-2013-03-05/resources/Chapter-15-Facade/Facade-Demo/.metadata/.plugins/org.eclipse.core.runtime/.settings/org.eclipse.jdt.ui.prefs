@@ -1,0 +1,20 @@
+#Tue Feb 19 21:36:27 CET 2013
+content_assist_proposals_foreground=0,0,0
+spelling_locale_initialized=true
+org.eclipse.jdt.ui.text.templates_migrated=true
+useAnnotationsPrefPage=true
+eclipse.preferences.version=1
+org.eclipse.jface.textfont=1|Courier New|10.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Courier New;
+tabWidthPropagated=true
+org.eclipse.jdt.ui.editor.tab.width=
+fontPropagated=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8"?><templates/>
+org.eclipse.jdt.ui.javadoclocations.migrated=true
+proposalOrderMigrated=true
+org.eclipse.jdt.ui.formatterprofiles.version=11
+content_assist_proposals_background=255,255,255
+content_assist_number_of_computers=9
+useQuickDiffPrefPage=true
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8"?><templates/>
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8"?><history maxLHS\="100" maxRHS\="10"><lhs name\="Cutter"><rhs name\="Cutter"/></lhs><lhs name\="Mixer"><rhs name\="Mixer"/></lhs><lhs name\="Robot"><rhs name\="Robot"/></lhs><lhs name\="Heater"><rhs name\="Heater"/></lhs><lhs name\="Packer"><rhs name\="Packer"/></lhs><lhs name\="WorkshopFacade"><rhs name\="WorkshopFacade"/></lhs></history>
+org.eclipse.jdt.ui.text.code_templates_migrated=true

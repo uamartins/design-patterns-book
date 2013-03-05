@@ -1,0 +1,14 @@
+public class Mixer {
+
+	public void turnOn() {
+		System.out.println("Включване на миксера");
+	}
+
+	public void turnOff() {
+		System.out.println("Изключване на миксера");
+	}
+	
+	public void mix() {
+		System.out.println("Разбъркване");
+	}
+}
