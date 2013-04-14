@@ -1,44 +1,47 @@
 public class TimerApplication {
-	public static class Settings {
-		private long milliseconds;
+    private static final int NS_IN_MS = 1000000;
 
-		private Settings() {
-		}
-
-		private long getMilliseconds() {
-			return this.milliseconds;
-		}
-
-		private void setMilliseconds(long value) {
-			this.milliseconds = value;
-		}
-	}
-
+    public static class Settings {
 	private long milliseconds;
 
-	private long startTimeInNanoseconds;
-
-	public long getMilliseconds() {
-		return this.milliseconds;
+	private Settings() {
 	}
 
-	public Settings getSettings() {
-		Settings settings = new Settings();
-		settings.setMilliseconds(this.milliseconds);
-
-		return settings;
+	private long getMilliseconds() {
+	    return milliseconds;
 	}
 
-	public void setSettings(Settings settings) {
-		this.milliseconds = settings.getMilliseconds();
+	private void setMilliseconds(long value) {
+	    milliseconds = value;
 	}
+    }
 
-	public void start() {
-		this.startTimeInNanoseconds = System.nanoTime();
-	}
+    private long milliseconds;
 
-	public void stop() {
-		long endTimeInNanoseconds = System.nanoTime();
-		this.milliseconds += (endTimeInNanoseconds - this.startTimeInNanoseconds) / 1000000;
-	}
+    private long beginNanoTime;
+
+    public long getMilliseconds() {
+	return milliseconds;
+    }
+
+    public Settings createSettings() {
+	Settings settings = new Settings();
+	settings.setMilliseconds(milliseconds);
+
+	return settings;
+    }
+
+    public void setSettings(Settings settings) {
+	milliseconds = settings.getMilliseconds();
+    }
+
+    public void start() {
+	beginNanoTime = System.nanoTime();
+    }
+
+    public void stop() {
+	long endNanoTime = System.nanoTime();
+	milliseconds += (endNanoTime - beginNanoTime)
+		/ NS_IN_MS;
+    }
 }
