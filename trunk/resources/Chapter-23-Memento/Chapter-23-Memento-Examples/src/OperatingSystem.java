@@ -1,36 +1,38 @@
 public class OperatingSystem {
-    private TimerApplication startedTimerApp;
-    private Repository repository;
+	private TimerApplication startedTimerApp;
+	private Repository repository;
 
-    public OperatingSystem() {
-	repository = new Repository();
-    }
-
-    public void startTimerApplication() {
-	startedTimerApp = new TimerApplication();
-
-	TimerApplication.Settings timerSettings = repository
-		.restoreSettings();
-
-	if (timerSettings != null) {
-	    startedTimerApp.setSettings(timerSettings);
+	public OperatingSystem() {
+		repository = new Repository();
 	}
 
-	startedTimerApp.start();
-    }
+	public void startTimerApplication() {
+		startedTimerApp = new TimerApplication();
 
-    public void stopTimerApplication() {
-	if (startedTimerApp != null) {
-	    startedTimerApp.stop();
+		TimerApplication.Settings timerSettings = 
+				repository.restoreSettings();
 
-	    System.out.println(startedTimerApp
-		    .getMilliseconds());
+		if (timerSettings != null) {
+			startedTimerApp.setSettings(timerSettings);
+		}
 
-	    TimerApplication.Settings timerSettings = 
-		    startedTimerApp.createSettings();
-	    repository.saveSettings(timerSettings);
-	    
-	    startedTimerApp = null;
+		startedTimerApp.start();
 	}
-    }
+
+	public void stopTimerApplication() {
+		if (startedTimerApp == null) {
+			return;
+		}
+
+		startedTimerApp.stop();
+
+		System.out.println(
+				startedTimerApp.getMilliseconds());
+
+		TimerApplication.Settings timerSettings = 
+				startedTimerApp.createSettings();
+		repository.saveSettings(timerSettings);
+
+		startedTimerApp = null;
+	}
 }
