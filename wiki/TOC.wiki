@@ -1,6 +1,5 @@
   * [Wiki Уики на екипа]
     * [WikiStages Етапи и крайни срокове]
-
       * [WikiStagesIteration09 Итерация - 9 - Писане]
       * [WikiStagesIteration08 Итерация - 8 - Писане]
       * [WikiStagesIteration07 Итерация - 7 - Смесена]
