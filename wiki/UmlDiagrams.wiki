@@ -24,7 +24,7 @@ UML диаграмите се създават с [http://www.visual-paradigm.co
 При експортиране на диаграмата от временния проект, като настройки избираме:
  * *Export type:* PNG without background - това осигурява прозрачен фон.
  * *dpi:* 300 - това ще осигури качество на картинката при печат на хартия.
- * *Export image with frame:* Export with frame - това ще ни осигури, че водния знак е в рамка, която след това можем да изрежем.`
+ * *Export image with frame:* Export with frame - това ще ни осигури, че водният знак е в рамка, която след това можем да изрежем.
 
 [http://design-patterns-book.googlecode.com/svn/wiki/images/UmlDiagrams/ExportDiagrams.png]
 
