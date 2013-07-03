@@ -12,6 +12,7 @@
       * [WikiStagesIteration01 Итерация - 1 - Писане]
     * [WikiChapterContent За съдържанието на главите]
     * [WikiEditors Ръководство на редактора]
+    * [UmlDiagrams UML диаграми]
   * [WikiDictionary Речник]
 <wiki:comment>
     * [WikiStatus Състояние на проекта]
