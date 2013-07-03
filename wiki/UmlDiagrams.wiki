@@ -10,7 +10,7 @@ UML диаграмите се създават с [http://www.visual-paradigm.co
 
 = Изисквания към съдържанието =
 Всички елементи в UML диаграмите трябва да са с *прозрачен стил*. За целта, след добавяне на елементи към диаграмите, трябва да го приложите от контекстното меню на елемента, `Styles and Formatting -> Transparent` 
-[http://design-patterns-book.googlecode.com/svn/wiki/images/WikiDiagrams/TransparentSyle.png]
+[http://design-patterns-book.googlecode.com/svn/wiki/images/UmlDiagrams/TransparentSyle.png]
 
 = Избягване на водния знак =
 Ограничението не важи, когато в проекта има само една диаграма. За тази цел:
@@ -26,7 +26,7 @@ UML диаграмите се създават с [http://www.visual-paradigm.co
  * *dpi:* 300 - това ще осигури качество на картинката при печат на хартия.
  * *Export image with frame:* Export with frame - това ще ни осигури, че водния знак е в рамка, която след това можем да изрежем.`
 
-[http://design-patterns-book.googlecode.com/svn/wiki/images/WikiDiagrams/ExportDiagrams.png]
+[http://design-patterns-book.googlecode.com/svn/wiki/images/UmlDiagrams/ExportDiagrams.png]
 
 _Забележка:_ При последващо изрязване на водния знак, проверете че запазвате картинката отново като PNG с прозрачен фон и с резолюция 300 dpi. Подходящ софтуер за изрязването е [http://www.getpaint.net/ Paint.NET].
 
